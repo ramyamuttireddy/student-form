@@ -3,7 +3,7 @@ import { authToken } from "../store/student";
 
 export const axiosInstance = axios.create({
     baseURL:'https://student-app-1-649j.onrender.com/',
-    timeout:1000,
+    timeout:10000,
     headers:{"X-Custom-Header" : "Footer"},
   })
 
