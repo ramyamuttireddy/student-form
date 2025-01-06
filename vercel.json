@@ -11,7 +11,7 @@
 
         },
         {
-            "src":"/students/:id",
+            "src":"/students/${response.data.student.id}",
             "dest":"/"
 
         }
