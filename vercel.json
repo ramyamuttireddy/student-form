@@ -11,7 +11,7 @@
 
         },
         {
-            "src":"/:id",
+            "src":"/students/:id",
             "dest":"/"
 
         }
