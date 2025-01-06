@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { axiosInstance } from "../client/api";
-import vine from "@vinejs/vine";
+import vine, { errors } from "@vinejs/vine";
 import { vineResolver } from "@hookform/resolvers/vine";
 import studentStore from "../store/student";
 import { useNavigate } from "react-router-dom";
@@ -29,6 +29,9 @@ const Login = () => {
       console.log("Logging in");
       console.log(response.data);
       login(response.data.student, response.data.token);
+      if(!student) {
+        errors("your Login with in correct student details")
+      }
       navigate(`/students/${response.data.student.id}`);
     } catch (error) {
       console.log("Error fetching data", error);
